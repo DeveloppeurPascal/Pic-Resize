@@ -7,7 +7,8 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ScrollBox,
   FMX.Memo, FMX.StdCtrls, FMX.Edit, FMX.EditBox, FMX.NumberBox,
-  FMX.Controls.Presentation, FMX.Layouts, FMX.Memo.Types;
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Memo.Types, FMX.Menus,
+  Olf.FMX.AboutDialog;
 
 type
   TfrmMain = class(TForm)
@@ -24,6 +25,12 @@ type
     lblTraitementEffectue: TLabel;
     mmoTraitementEffectue: TMemo;
     timTraitement: TTimer;
+    MainMenu1: TMainMenu;
+    mnuFichier: TMenuItem;
+    mnuQuitter: TMenuItem;
+    mnuAide: TMenuItem;
+    mnuAPropos: TMenuItem;
+    OlfAboutDialog1: TOlfAboutDialog;
     procedure FormCreate(Sender: TObject);
     procedure cbHauteurChange(Sender: TObject);
     procedure edtLargeurChange(Sender: TObject);
@@ -36,6 +43,9 @@ type
     procedure lATraiterDragDrop(Sender: TObject; const Data: TDragObject;
       const Point: TPointF);
     procedure timTraitementTimer(Sender: TObject);
+    procedure mnuQuitterClick(Sender: TObject);
+    procedure mnuAProposClick(Sender: TObject);
+    procedure OlfAboutDialog1URLClick(const AURL: string);
   private
     { Déclarations privées }
     procedure memoAdd(mmo: TMemo; s: string);
@@ -55,7 +65,7 @@ implementation
 {$R *.fmx}
 
 uses System.IOUtils, System.Threading, System.Math,
-  ApplicationOpenFileEvent, uConfig;
+  ApplicationOpenFileEvent, uConfig, u_urlOpen;
 
 function TfrmMain.AjouterFichierATraiter(NomFichier: string): Boolean;
 var
@@ -108,6 +118,7 @@ begin
             begin
               logEffectuee('btm1.width = ' + btm1.Width.tostring);
               logEffectuee('btm1.height = ' + btm1.height.tostring);
+              logEffectuee('btm1.bitmapscale = ' + btm1.bitmapscale.tostring);
             end);
 {$ENDIF}
           if tconfig.changeLargeur and (tconfig.largeur > 0) then
@@ -194,6 +205,9 @@ begin
                 logEffectuee('NomFichier = ' + NomFichier);
                 logEffectuee('Extension = ' + Extension);
                 logEffectuee('NomFichierDest = ' + NomFichierDest);
+                logEffectuee('btm2.width = ' + btm2.Width.tostring);
+                logEffectuee('btm2.height = ' + btm2.height.tostring);
+                logEffectuee('btm2.bitmapscale = ' + btm2.bitmapscale.tostring);
               end);
 {$ENDIF}
             btm2.SaveToFile(NomFichierDest);
@@ -264,6 +278,11 @@ var
   s: string;
   i: integer;
 begin
+{$IFDEF MACOS}
+  // Masque le premier menu, du cop c'est le second ("aide")
+  // qui fusionne avec celui de macOS.
+  mnuFichier.Visible := false;
+{$ENDIF}
   cbLargeur.IsChecked := tconfig.changeLargeur;
   edtLargeur.Value := tconfig.largeur;
   cbHauteur.IsChecked := tconfig.changeHauteur;
@@ -325,6 +344,21 @@ procedure TfrmMain.memoAdd(mmo: TMemo; s: string);
 begin
   mmo.Lines.Add(s);
   mmo.GoToTextEnd;
+end;
+
+procedure TfrmMain.mnuAProposClick(Sender: TObject);
+begin
+  OlfAboutDialog1.Execute;
+end;
+
+procedure TfrmMain.mnuQuitterClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmMain.OlfAboutDialog1URLClick(const AURL: string);
+begin
+  url_Open_In_Browser(AURL);
 end;
 
 procedure TfrmMain.timTraitementTimer(Sender: TObject);
