@@ -6,7 +6,7 @@
         <MainSource>PicResize.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Linux64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>135299</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -366,12 +366,19 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="fPicResize.pas">
-            <Form>frmPicResize</Form>
+        <DCCReference Include="fMain.pas">
+            <Form>frmMain</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="uParam.pas"/>
+        <DCCReference Include="uConfig.pas"/>
         <DCCReference Include="ApplicationOpenFileEvent.pas"/>
+        <DCCReference Include="..\lib-externes\librairies\Olf.RTL.Params.pas"/>
+        <DCCReference Include="..\lib-externes\librairies\u_urlOpen.pas"/>
+        <DCCReference Include="..\lib-externes\AboutDialog-Delphi-Component\sources\Olf.FMX.AboutDialog.pas"/>
+        <DCCReference Include="..\lib-externes\AboutDialog-Delphi-Component\sources\Olf.FMX.AboutDialogForm.pas">
+            <Form>OlfAboutDialogForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -442,6 +449,12 @@
                     <Platform Name="Win64">
                         <RemoteDir>Assets\</RemoteDir>
                         <RemoteName>Logo44x44.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Linux64\Debug\PicResize" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Linux64">
+                        <RemoteName>PicResize</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

@@ -1,4 +1,4 @@
-unit fPicResize;
+unit fMain;
 
 interface
 
@@ -7,10 +7,10 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ScrollBox,
   FMX.Memo, FMX.StdCtrls, FMX.Edit, FMX.EditBox, FMX.NumberBox,
-  FMX.Controls.Presentation, FMX.Layouts;
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Memo.Types;
 
 type
-  TfrmPicResize = class(TForm)
+  TfrmMain = class(TForm)
     lLargeur: TLayout;
     cbLargeur: TCheckBox;
     edtLargeur: TNumberBox;
@@ -48,16 +48,16 @@ type
   end;
 
 var
-  frmPicResize: TfrmPicResize;
+  frmMain: TfrmMain;
 
 implementation
 
 {$R *.fmx}
 
-uses uParam, System.IOUtils, System.Threading, System.Math,
-  ApplicationOpenFileEvent;
+uses System.IOUtils, System.Threading, System.Math,
+  ApplicationOpenFileEvent, uConfig;
 
-function TfrmPicResize.AjouterFichierATraiter(NomFichier: string): Boolean;
+function TfrmMain.AjouterFichierATraiter(NomFichier: string): Boolean;
 var
   s: string;
 begin
@@ -70,17 +70,17 @@ begin
     logEffectuee('ERROR : fichier non traité.' + NomFichier);
 end;
 
-procedure TfrmPicResize.cbHauteurChange(Sender: TObject);
+procedure TfrmMain.cbHauteurChange(Sender: TObject);
 begin
-  param.changeHauteur := cbHauteur.IsChecked;
+  tconfig.changeHauteur := cbHauteur.IsChecked;
 end;
 
-procedure TfrmPicResize.cbLargeurChange(Sender: TObject);
+procedure TfrmMain.cbLargeurChange(Sender: TObject);
 begin
-  param.changeLargeur := cbLargeur.IsChecked;
+  tconfig.changeLargeur := cbLargeur.IsChecked;
 end;
 
-procedure TfrmPicResize.changeTailleFichier(NomFichier: string);
+procedure TfrmMain.changeTailleFichier(NomFichier: string);
 begin
   ttask.run(
     procedure
@@ -97,8 +97,8 @@ begin
           logEffectuee('Travail sur ' + NomFichier);
         end);
       if tfile.exists(NomFichier) and
-        ((param.changeLargeur and (param.largeur > 0)) or
-        (param.changeHauteur and (param.hauteur > 0))) then
+        ((tconfig.changeLargeur and (tconfig.largeur > 0)) or
+        (tconfig.changeHauteur and (tconfig.hauteur > 0))) then
       begin
         btm1 := TBitmap.CreateFromFile(NomFichier);
         try
@@ -110,12 +110,12 @@ begin
               logEffectuee('btm1.height = ' + btm1.height.tostring);
             end);
 {$ENDIF}
-          if param.changeLargeur and (param.largeur > 0) then
-            ratiow := btm1.Width / param.largeur
+          if tconfig.changeLargeur and (tconfig.largeur > 0) then
+            ratiow := btm1.Width / tconfig.largeur
           else
             ratiow := 0;
-          if param.changeHauteur and (param.hauteur > 0) then
-            ratioh := btm1.height / param.hauteur
+          if tconfig.changeHauteur and (tconfig.hauteur > 0) then
+            ratioh := btm1.height / tconfig.hauteur
           else
             ratioh := 0;
           if ((ratiow = 0) or (ratioh < ratiow)) and (ratioh > 0) then
@@ -152,11 +152,11 @@ begin
           if ratiow = 0 then
             w := btm1.Width
           else
-            w := param.largeur;
+            w := tconfig.largeur;
           if ratioh = 0 then
             h := btm1.height
           else
-            h := param.hauteur;
+            h := tconfig.hauteur;
 {$IFDEF DEBUG}
           tthread.Synchronize(nil,
             procedure
@@ -226,53 +226,49 @@ begin
     end);
 end;
 
-procedure TfrmPicResize.edtHauteurChange(Sender: TObject);
+procedure TfrmMain.edtHauteurChange(Sender: TObject);
 begin
-  param.hauteur := trunc(edtHauteur.Value);
+  tconfig.hauteur := trunc(edtHauteur.Value);
 end;
 
-procedure TfrmPicResize.edtLargeurChange(Sender: TObject);
+procedure TfrmMain.edtLargeurChange(Sender: TObject);
 begin
-  param.largeur := trunc(edtLargeur.Value);
+  tconfig.largeur := trunc(edtLargeur.Value);
 end;
 
-procedure TfrmPicResize.FormClose(Sender: TObject;
-
-var Action: TCloseAction);
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   s: string;
 begin
-  param.save;
+  tconfig.save;
   if mmoATraiter.Lines.Count > 0 then
   begin
-    s := tpath.Combine(param.paramfolder, 'waiting.dat');
+    s := tpath.Combine(tconfig.Folder, 'waiting.dat');
     mmoATraiter.Lines.SaveToFile(s);
     mmoATraiter.Lines.Clear;
   end;
 end;
 
-procedure TfrmPicResize.FormCloseQuery(Sender: TObject;
-
-var CanClose: Boolean);
+procedure TfrmMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if mmoATraiter.Lines.Count < 1 then
     CanClose := true
   else
     CanClose := mrYes = MessageDlg
-      ('Il reste des images à trairer. Voulez-vous fermer quand même ?',
+      ('Il reste des images à traiter. Voulez-vous fermer quand même ?',
       tmsgdlgtype.mtConfirmation, [tmsgdlgbtn.mbYes, tmsgdlgbtn.mbNo], 0);
 end;
 
-procedure TfrmPicResize.FormCreate(Sender: TObject);
+procedure TfrmMain.FormCreate(Sender: TObject);
 var
   s: string;
   i: integer;
 begin
-  cbLargeur.IsChecked := param.changeLargeur;
-  edtLargeur.Value := param.largeur;
-  cbHauteur.IsChecked := param.changeHauteur;
-  edtHauteur.Value := param.hauteur;
-  s := tpath.Combine(param.paramfolder, 'waiting.dat');
+  cbLargeur.IsChecked := tconfig.changeLargeur;
+  edtLargeur.Value := tconfig.largeur;
+  cbHauteur.IsChecked := tconfig.changeHauteur;
+  edtHauteur.Value := tconfig.hauteur;
+  s := tpath.Combine(tconfig.Folder, 'waiting.dat');
   if tfile.exists(s) then
   begin
     mmoATraiter.Lines.LoadFromFile(s);
@@ -289,7 +285,7 @@ begin
 {$ENDIF}
 end;
 
-procedure TfrmPicResize.lATraiterDragDrop(Sender: TObject;
+procedure TfrmMain.lATraiterDragDrop(Sender: TObject;
 
 const Data: TDragObject;
 
@@ -301,7 +297,7 @@ begin
     AjouterFichierATraiter(s);
 end;
 
-procedure TfrmPicResize.lATraiterDragOver(Sender: TObject;
+procedure TfrmMain.lATraiterDragOver(Sender: TObject;
 
 const Data: TDragObject;
 
@@ -315,23 +311,23 @@ begin
     Operation := TDragOperation.None;
 end;
 
-procedure TfrmPicResize.logATraiter(s: string);
+procedure TfrmMain.logATraiter(s: string);
 begin
   memoAdd(mmoATraiter, s);
 end;
 
-procedure TfrmPicResize.logEffectuee(s: string);
+procedure TfrmMain.logEffectuee(s: string);
 begin
   memoAdd(mmoTraitementEffectue, s);
 end;
 
-procedure TfrmPicResize.memoAdd(mmo: TMemo; s: string);
+procedure TfrmMain.memoAdd(mmo: TMemo; s: string);
 begin
   mmo.Lines.Add(s);
   mmo.GoToTextEnd;
 end;
 
-procedure TfrmPicResize.timTraitementTimer(Sender: TObject);
+procedure TfrmMain.timTraitementTimer(Sender: TObject);
 begin
   timTraitement.Enabled := false;
   try
@@ -346,5 +342,11 @@ begin
     timTraitement.Enabled := true;
   end;
 end;
+
+initialization
+
+{$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := true;
+{$ENDIF}
 
 end.

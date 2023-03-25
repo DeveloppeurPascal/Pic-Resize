@@ -3,14 +3,18 @@ program PicResize;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  fPicResize in 'fPicResize.pas' {frmPicResize},
-  uParam in 'uParam.pas',
-  ApplicationOpenFileEvent in 'ApplicationOpenFileEvent.pas';
+  fMain in 'fMain.pas' {frmMain},
+  uConfig in 'uConfig.pas',
+  ApplicationOpenFileEvent in 'ApplicationOpenFileEvent.pas',
+  Olf.RTL.Params in '..\lib-externes\librairies\Olf.RTL.Params.pas',
+  u_urlOpen in '..\lib-externes\librairies\u_urlOpen.pas',
+  Olf.FMX.AboutDialog in '..\lib-externes\AboutDialog-Delphi-Component\sources\Olf.FMX.AboutDialog.pas',
+  Olf.FMX.AboutDialogForm in '..\lib-externes\AboutDialog-Delphi-Component\sources\Olf.FMX.AboutDialogForm.pas' {OlfAboutDialogForm};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TfrmPicResize, frmPicResize);
+  Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
 end.
