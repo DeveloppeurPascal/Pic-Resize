@@ -1,16 +1,16 @@
-# Delphi-Projects-Template
+# Pic Resize
 
 [Cette page en français.](LISEZMOI.md)
 
-A git template for my Delphi (or others) projects.
+Fast and easy to use utility to change the size of one or more images in JPEG or PNG formats.
 
-This template is distributed under MIT license. The AGPL license is for projects I create from this code repository template. Use the license you want if you use the template.
+It works on Windows, Mac and Linux with a graphical interface that allows you to specify the size of the final images and to transfer the images to be resized.
 
 This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 
 ## Install
 
-To download this project you better should use "git" command but you also can download a ZIP from [its GitHub repository](https://github.com/DeveloppeurPascal/XXXXXXXXXX).
+To download this project you better should use "git" command but you also can download a ZIP from [its GitHub repository](https://github.com/DeveloppeurPascal/Pic-Resize).
 
 **Warning :** if the project has submodules dependencies they wont be in the ZIP file. You'll have to download them manually.
 
@@ -18,18 +18,18 @@ To download this project you better should use "git" command but you also can do
 
 This project depends on :
 
-* project 1
-* project 2
+* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in subfolder "lib-externes\librairies"
+* [DeveloppeurPascal/AboutDialog-Delphi-Component](https://github.com/DeveloppeurPascal/AboutDialog-Delphi-Component) must be installed in subfolder "lib-externes\AboutDialog-Delphi-Component"
 
 ## How to ask a new feature, report a bug or a security issue ?
 
-If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/XXXXXXXXXX) and [open a new issue](https://github.com/DeveloppeurPascal/XXXXXXXXXX/issues).
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/Pic-Resize) and [open a new issue](https://github.com/DeveloppeurPascal/Pic-Resize/issues).
 
 If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
 
 You also can fork the repository and contribute by submitting pull requests if you want to help. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-## Dual licensing model (only for my projects, not for this code repository template)
+## Dual licensing model
 
 This project is distributed under [AGPL 3.0 or later](https://choosealicense.com/licenses/agpl-3.0/) license.
 
