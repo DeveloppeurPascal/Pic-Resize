@@ -8,7 +8,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ScrollBox,
   FMX.Memo, FMX.StdCtrls, FMX.Edit, FMX.EditBox, FMX.NumberBox,
   FMX.Controls.Presentation, FMX.Layouts, FMX.Memo.Types, FMX.Menus,
-  Olf.FMX.AboutDialog;
+  Olf.FMX.AboutDialog, dmPicResizeLogo;
 
 type
   TfrmMain = class(TForm)
@@ -50,6 +50,7 @@ type
     { Déclarations privées }
     procedure memoAdd(mmo: TMemo; s: string);
     procedure changeTailleFichier(NomFichier: string);
+    procedure SetFormTitle;
   public
     { Déclarations publiques }
     function AjouterFichierATraiter(NomFichier: string): Boolean;
@@ -278,6 +279,7 @@ var
   s: string;
   i: integer;
 begin
+  SetFormTitle;
 {$IFDEF MACOS}
   // Masque le premier menu, du cop c'est le second ("aide")
   // qui fusionne avec celui de macOS.
@@ -359,6 +361,16 @@ end;
 procedure TfrmMain.OlfAboutDialog1URLClick(const AURL: string);
 begin
   url_Open_In_Browser(AURL);
+end;
+
+procedure TfrmMain.SetFormTitle;
+begin
+{$IFDEF DEBUG}
+  caption := '[DEBUG] ' + OlfAboutDialog1.Titre + ' v' +
+    OlfAboutDialog1.VersionNumero;
+{$ELSE}
+  caption := OlfAboutDialog1.Titre + ' v' + OlfAboutDialog1.VersionNumero;
+{$ENDIF}
 end;
 
 procedure TfrmMain.timTraitementTimer(Sender: TObject);
