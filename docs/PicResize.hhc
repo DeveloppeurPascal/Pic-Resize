@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+    <OBJECT type="text/site properties">
+      <param name="Window Styles" value="0x800227">
+    </OBJECT>
+    <UL>      <LI> <OBJECT type="text/sitemap">
+          <param name="Name" value="PicResize">
+          <param name="Local" value="PicResize.html">
+          </OBJECT>
+          <UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="ApplicationOpenFileEvent">
+                  <param name="Local" value="ApplicationOpenFileEvent.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Delegates">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="tApplicationOpenFileEvent">
+                                  <param name="Local" value="ApplicationOpenFileEvent.tApplicationOpenFileEvent.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Invoke">
+                                                  <param name="Local" value="ApplicationOpenFileEvent.tApplicationOpenFileEvent.Invoke.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Routines">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="ReferenceApplicationOpenFileEvent">
+                                  <param name="Local" value="ApplicationOpenFileEvent.ReferenceApplicationOpenFileEvent.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="dmPicResizeLogo">
+                  <param name="Local" value="dmPicResizeLogo.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TdmPRLogo">
+                                  <param name="Local" value="dmPicResizeLogo.TdmPRLogo.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ilLogo">
+                                                  <param name="Local" value="dmPicResizeLogo.TdmPRLogo.ilLogo.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="dmPRLogo">
+                                  <param name="Local" value="dmPicResizeLogo.dmPRLogo.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="fMain">
+                  <param name="Local" value="fMain.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TfrmMain">
+                                  <param name="Local" value="fMain.TfrmMain.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="AjouterFichierATraiter">
+                                                  <param name="Local" value="fMain.TfrmMain.AjouterFichierATraiter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormClose">
+                                                  <param name="Local" value="fMain.TfrmMain.FormClose.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormCloseQuery">
+                                                  <param name="Local" value="fMain.TfrmMain.FormCloseQuery.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="FormCreate">
+                                                  <param name="Local" value="fMain.TfrmMain.FormCreate.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="OlfAboutDialog1URLClick">
+                                                  <param name="Local" value="fMain.TfrmMain.OlfAboutDialog1URLClick.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cbHauteurChange">
+                                                  <param name="Local" value="fMain.TfrmMain.cbHauteurChange.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cbLargeurChange">
+                                                  <param name="Local" value="fMain.TfrmMain.cbLargeurChange.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="edtHauteurChange">
+                                                  <param name="Local" value="fMain.TfrmMain.edtHauteurChange.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="edtLargeurChange">
+                                                  <param name="Local" value="fMain.TfrmMain.edtLargeurChange.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lATraiterDragDrop">
+                                                  <param name="Local" value="fMain.TfrmMain.lATraiterDragDrop.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lATraiterDragOver">
+                                                  <param name="Local" value="fMain.TfrmMain.lATraiterDragOver.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="logATraiter">
+                                                  <param name="Local" value="fMain.TfrmMain.logATraiter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="logEffectuee">
+                                                  <param name="Local" value="fMain.TfrmMain.logEffectuee.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuAProposClick">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuAProposClick.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuQuitterClick">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuQuitterClick.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="timTraitementTimer">
+                                                  <param name="Local" value="fMain.TfrmMain.timTraitementTimer.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Fields">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="MainMenu1">
+                                                  <param name="Local" value="fMain.TfrmMain.MainMenu1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="OlfAboutDialog1">
+                                                  <param name="Local" value="fMain.TfrmMain.OlfAboutDialog1.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cbHauteur">
+                                                  <param name="Local" value="fMain.TfrmMain.cbHauteur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="cbLargeur">
+                                                  <param name="Local" value="fMain.TfrmMain.cbLargeur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="edtHauteur">
+                                                  <param name="Local" value="fMain.TfrmMain.edtHauteur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="edtLargeur">
+                                                  <param name="Local" value="fMain.TfrmMain.edtLargeur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lATraiter">
+                                                  <param name="Local" value="fMain.TfrmMain.lATraiter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lHauteur">
+                                                  <param name="Local" value="fMain.TfrmMain.lHauteur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lLargeur">
+                                                  <param name="Local" value="fMain.TfrmMain.lLargeur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lTraitementEffectue">
+                                                  <param name="Local" value="fMain.TfrmMain.lTraitementEffectue.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lblATraiter">
+                                                  <param name="Local" value="fMain.TfrmMain.lblATraiter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="lblTraitementEffectue">
+                                                  <param name="Local" value="fMain.TfrmMain.lblTraitementEffectue.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mmoATraiter">
+                                                  <param name="Local" value="fMain.TfrmMain.mmoATraiter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mmoTraitementEffectue">
+                                                  <param name="Local" value="fMain.TfrmMain.mmoTraitementEffectue.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuAPropos">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuAPropos.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuAide">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuAide.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuFichier">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuFichier.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="mnuQuitter">
+                                                  <param name="Local" value="fMain.TfrmMain.mnuQuitter.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="timTraitement">
+                                                  <param name="Local" value="fMain.TfrmMain.timTraitement.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Variables">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="frmMain">
+                                  <param name="Local" value="fMain.frmMain.html">
+                                  </OBJECT>
+                          </UL>
+                  </UL>
+              <LI> <OBJECT type="text/sitemap">
+                  <param name="Name" value="uConfig">
+                  <param name="Local" value="uConfig.html">
+                  </OBJECT>
+                  <UL>
+                      <LI> <OBJECT type="text/sitemap">
+                          <param name="Name" value="Classes">
+                          </OBJECT>
+                          <UL>
+                              <LI> <OBJECT type="text/sitemap">
+                                  <param name="Name" value="TConfig">
+                                  <param name="Local" value="uConfig.TConfig.html">
+                                  </OBJECT>
+                                  <UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Properties">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ChangeHauteur">
+                                                  <param name="Local" value="uConfig.TConfig.ChangeHauteur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="ChangeLargeur">
+                                                  <param name="Local" value="uConfig.TConfig.ChangeLargeur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Folder">
+                                                  <param name="Local" value="uConfig.TConfig.Folder.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Hauteur">
+                                                  <param name="Local" value="uConfig.TConfig.Hauteur.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Largeur">
+                                                  <param name="Local" value="uConfig.TConfig.Largeur.html">
+                                                  </OBJECT>
+                                          </UL>
+                                      <LI> <OBJECT type="text/sitemap">
+                                          <param name="Name" value="Methods">
+                                          </OBJECT>
+                                          <UL>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Load">
+                                                  <param name="Local" value="uConfig.TConfig.Load.html">
+                                                  </OBJECT>
+                                              <LI> <OBJECT type="text/sitemap">
+                                                  <param name="Name" value="Save">
+                                                  <param name="Local" value="uConfig.TConfig.Save.html">
+                                                  </OBJECT>
+                                          </UL>
+                                  </UL>
+                          </UL>
+                  </UL>
+          </UL>
+    </UL>
+</BODY>
+</HTML>
